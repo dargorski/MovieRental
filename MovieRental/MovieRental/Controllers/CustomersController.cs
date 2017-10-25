@@ -10,40 +10,41 @@ namespace MovieRental.Controllers
 {
     public class CustomersController : Controller
     {
-        readonly List<Movie> _movie = new List<Movie> { new Movie { Name = "Shrek" } };
-        readonly List<Customer> _customers = new List<Customer>
-        {
-            new Customer() {Id=1,Name = "John Smith"},
-            new Customer() {Id=2,Name = "Mary Williams"}
-        };
+        private ApplicationDbContext _context;
 
+        public CustomersController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
+
+        
 
         // GET: Customers
         public ActionResult Index()
         {
 
 
-            RandomMovieViewModel viewModel = new RandomMovieViewModel
-            {
-                Movies = _movie,
-                Customers = _customers
-            };
+            var customers = _context.Customers.ToList();
 
-
-
-            return View(viewModel);
+            return View(customers);
 
         }
 
         //Get Customers/Id
         public ActionResult Details(int id)
         {
-            foreach (var customer in _customers)
-            {
-                if (customer.Id == id)
-                    return View(customer);
-            }
-            return HttpNotFound();
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            return View(customer);
         }
 
     }
