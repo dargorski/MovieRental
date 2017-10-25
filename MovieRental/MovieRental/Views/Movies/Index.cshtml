@@ -1,0 +1,21 @@
+﻿@model MovieRental.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead><tr><th><h3>Movies</h3></th></tr></thead>
+        <tbody>
+            @foreach (var movie in Model.Movies)
+            {
+                <tr>
+                    <td><h3>@movie.Name</h3></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

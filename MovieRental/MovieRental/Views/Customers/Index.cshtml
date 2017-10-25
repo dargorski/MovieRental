@@ -1,0 +1,35 @@
+﻿@model MovieRental.ViewModels.RandomMovieViewModel
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+@{
+    var className = Model.Customers.Count > 0 ? "popular" : null;
+}
+
+<h2>Customers</h2>
+
+@if (Model.Customers.Count == 0)
+{
+    <p>There is no customers.</p>
+}
+else
+{
+    <div class="container">
+        <table class="table table-bordered">
+            <thead><tr><th><h3>Customers</h3></th></tr></thead>
+            <tbody>
+                @foreach (var customer in Model.Customers)
+                {
+                    <tr>
+                        <td><h3><a href="~/customers/details/@customer.Id">@customer.Name</a></h3></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
