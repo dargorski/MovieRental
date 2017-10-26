@@ -225,6 +225,18 @@
     <Compile Include="Migrations\201710260913085_AddValuesToNameColumnInMembershipTypes.Designer.cs">
       <DependentUpon>201710260913085_AddValuesToNameColumnInMembershipTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710260944412_AddBirthdayToCustomer.cs" />
+    <Compile Include="Migrations\201710260944412_AddBirthdayToCustomer.Designer.cs">
+      <DependentUpon>201710260944412_AddBirthdayToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710260947050_BirthdayDisplayFormat.cs" />
+    <Compile Include="Migrations\201710260947050_BirthdayDisplayFormat.Designer.cs">
+      <DependentUpon>201710260947050_BirthdayDisplayFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710260959035_NullableBirthday.cs" />
+    <Compile Include="Migrations\201710260959035_NullableBirthday.Designer.cs">
+      <DependentUpon>201710260959035_NullableBirthday.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -336,6 +348,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710260913085_AddValuesToNameColumnInMembershipTypes.resx">
       <DependentUpon>201710260913085_AddValuesToNameColumnInMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710260944412_AddBirthdayToCustomer.resx">
+      <DependentUpon>201710260944412_AddBirthdayToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710260947050_BirthdayDisplayFormat.resx">
+      <DependentUpon>201710260947050_BirthdayDisplayFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710260959035_NullableBirthday.resx">
+      <DependentUpon>201710260959035_NullableBirthday.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
