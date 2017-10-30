@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MovieRental.Models;
+using MovieRental.ViewModel;
 using MovieRental.ViewModels;
 
 namespace MovieRental.Controllers
@@ -48,5 +49,23 @@ namespace MovieRental.Controllers
             return View(customer);
         }
 
+        public ActionResult NewCustomer()
+        {
+            var membershipTypes = _context.MembershipTypes.ToList();
+            var viewModel = new NewCustomerViewModel
+            {
+                MembershipTypes = membershipTypes
+            };
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
+        }
     }
 }
