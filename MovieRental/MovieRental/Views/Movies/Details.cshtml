@@ -8,8 +8,15 @@
 
 <ul>
     <li>Genre: @Model.Genre.Name</li>
-    <li>Release Date: @Model.ReleaseDate.ToLongDateString()</li>
-    <li>Add Date: @Model.AddToStockDate.ToLongDateString() </li>
+    @if (Model.ReleaseDate.HasValue)
+    {
+        <li>Release Date: @Model.ReleaseDate.Value.ToLongDateString()</li>
+    }
+    @if (Model.AddToStockDate.HasValue)
+    {
+        <li>Add Date: @Model.AddToStockDate.Value.ToLongDateString() </li>
+    }
+    
     <li>Number in stock: @Model.NumberInStock</li>
    
 </ul>
