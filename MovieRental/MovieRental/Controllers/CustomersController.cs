@@ -54,8 +54,11 @@ namespace MovieRental.Controllers
             var membershipTypes = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel
             {
-                MembershipTypes = membershipTypes
+                MembershipTypes = membershipTypes,
+                PageTitle = "New Customer"
             };
+
+            
             return View("CustomerForm",viewModel);
         }
 
@@ -93,9 +96,10 @@ namespace MovieRental.Controllers
             var viewModel = new CustomerFormViewModel
             {
                 Customer = customer,
-                MembershipTypes = _context.MembershipTypes.ToList()
+                MembershipTypes = _context.MembershipTypes.ToList(),
+                PageTitle = "Edit Customer"
             };
-
+            
             return View("CustomerForm", viewModel);
 
         }

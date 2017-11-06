@@ -10,6 +10,6 @@ namespace MovieRental.ViewModel
     {
         public IEnumerable<Genre> Genres { get; set; }
         public Movie Movie { get; set; }
-
+        public string PageTitle { get; set; }
     }
 }

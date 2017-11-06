@@ -50,7 +50,8 @@ namespace MovieRental.Controllers
             var genres = _context.Genres.ToList();
             var viewModel = new MovieFormViewModel
             {
-                Genres = genres
+                Genres = genres,
+                PageTitle = "New Movie"
             };
 
             return View("MovieForm", viewModel);
@@ -94,7 +95,8 @@ namespace MovieRental.Controllers
             var viewModel = new MovieFormViewModel
             {
                 Movie = movie,
-                Genres = _context.Genres.ToList()
+                Genres = _context.Genres.ToList(),
+                PageTitle = "Edit Movie"
             };
 
             return View("MovieForm", viewModel);
