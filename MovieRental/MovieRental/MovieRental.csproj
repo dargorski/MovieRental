@@ -261,6 +261,10 @@
     <Compile Include="Migrations\201711052301423_ChangeDateTimeToNullableType2.Designer.cs">
       <DependentUpon>201711052301423_ChangeDateTimeToNullableType2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711061022190_DataAnnotationsMovieModel.cs" />
+    <Compile Include="Migrations\201711061022190_DataAnnotationsMovieModel.Designer.cs">
+      <DependentUpon>201711061022190_DataAnnotationsMovieModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -405,6 +409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711052301423_ChangeDateTimeToNullableType2.resx">
       <DependentUpon>201711052301423_ChangeDateTimeToNullableType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711061022190_DataAnnotationsMovieModel.resx">
+      <DependentUpon>201711061022190_DataAnnotationsMovieModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
