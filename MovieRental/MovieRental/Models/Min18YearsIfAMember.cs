@@ -24,7 +24,7 @@ namespace MovieRental.Models
 
             return (age > 18) 
                 ? ValidationResult.Success 
-                : new ValidationResult("Customer must be atleasy 18 years old.");
+                : new ValidationResult("Customer must be atleast 18 years old.");
             
         }
     }
