@@ -265,6 +265,14 @@
     <Compile Include="Migrations\201711061022190_DataAnnotationsMovieModel.Designer.cs">
       <DependentUpon>201711061022190_DataAnnotationsMovieModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711061947025_AddedAnnotationsToMovie.cs" />
+    <Compile Include="Migrations\201711061947025_AddedAnnotationsToMovie.Designer.cs">
+      <DependentUpon>201711061947025_AddedAnnotationsToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711061956048_RangeForGenre.cs" />
+    <Compile Include="Migrations\201711061956048_RangeForGenre.Designer.cs">
+      <DependentUpon>201711061956048_RangeForGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -413,6 +421,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711061022190_DataAnnotationsMovieModel.resx">
       <DependentUpon>201711061022190_DataAnnotationsMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711061947025_AddedAnnotationsToMovie.resx">
+      <DependentUpon>201711061947025_AddedAnnotationsToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711061956048_RangeForGenre.resx">
+      <DependentUpon>201711061956048_RangeForGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

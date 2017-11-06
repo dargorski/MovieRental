@@ -18,11 +18,14 @@ namespace MovieRental.Models
         public DateTime? AddToStockDate { get; set; }
 
         [Display(Name = "Number in stock")]
+        [Required]
+        [Range(1, 20)]
         public int NumberInStock { get; set; }
 
         public Genre Genre { get; set; }
 
         [Display(Name = "Genre")]
+        [Required]
         public byte GenreId { get; set; }
     }
 }
