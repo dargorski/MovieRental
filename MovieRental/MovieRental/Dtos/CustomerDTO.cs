@@ -7,7 +7,7 @@ using System.Web;
 
 namespace MovieRental.Dtos
 {
-    public class CustomerDTO
+    public class CustomerDto
     {
         public int Id { get; set; }
 
