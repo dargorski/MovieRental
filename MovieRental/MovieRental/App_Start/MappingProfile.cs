@@ -16,6 +16,7 @@ namespace MovieRental.App_Start
             Mapper.CreateMap<Customer, CustomerDto>();
             Mapper.CreateMap<Movie, MovieDto>();
             Mapper.CreateMap<MembershipType, MembershipTypeDto>();
+            Mapper.CreateMap<Genre, GenreDto>();
 
 
             // DTO to Domain
@@ -24,6 +25,8 @@ namespace MovieRental.App_Start
             Mapper.CreateMap<MovieDto, Movie>()
                 .ForMember(m => m.Id, opt => opt.Ignore());
             Mapper.CreateMap<MembershipTypeDto, MembershipType>()
+                .ForMember(c => c.Id, opt => opt.Ignore());
+            Mapper.CreateMap<GenreDto, Genre>()
                 .ForMember(c => c.Id, opt => opt.Ignore());
         }
     }

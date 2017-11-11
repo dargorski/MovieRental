@@ -7,7 +7,6 @@ using System.Web;
 using System.Web.Mvc;
 using MovieRental.Models;
 using MovieRental.ViewModel;
-using MovieRental.ViewModels;
 
 namespace MovieRental.Controllers
 {
@@ -27,10 +26,7 @@ namespace MovieRental.Controllers
         // GET: Movies/Random
         public ActionResult Index()
         {
-
-            var movies = _context.Movies.Include(c => c.Genre).ToList();
-
-            return View(movies);
+            return View();
         }
 
         //EDIT id = id
@@ -50,8 +46,7 @@ namespace MovieRental.Controllers
             var genres = _context.Genres.ToList();
             var viewModel = new MovieFormViewModel
             {
-                Genres = genres,
-                PageTitle = "New Movie"
+                Genres = genres
             };
 
             return View("MovieForm", viewModel);
@@ -63,9 +58,9 @@ namespace MovieRental.Controllers
         {
             if (!ModelState.IsValid)
             {
-                var viewModel = new MovieFormViewModel
+                var viewModel = new MovieFormViewModel(movie)
                 {
-                    Movie = new Movie(),
+                    
                     Genres = _context.Genres.ToList()
                 };
                 return View("MovieForm", viewModel);
@@ -84,14 +79,9 @@ namespace MovieRental.Controllers
                 movieInDb.NumberInStock = movie.NumberInStock;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
             }
-            try
-            {
+            
                 _context.SaveChanges();
-            }
-            catch (DbEntityValidationException e)
-            {
-                Console.WriteLine(e);
-            }
+            
 
             return RedirectToAction("Index", "Movies");
         }
@@ -103,11 +93,9 @@ namespace MovieRental.Controllers
             if (movie == null)
                 return HttpNotFound();
 
-            var viewModel = new MovieFormViewModel
+            var viewModel = new MovieFormViewModel(movie)
             {
-                Movie = movie,
-                Genres = _context.Genres.ToList(),
-                PageTitle = "Edit Movie"
+                Genres = _context.Genres.ToList()
             };
 
             return View("MovieForm", viewModel);

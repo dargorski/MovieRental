@@ -6,7 +6,6 @@ using System.Web;
 using System.Web.Mvc;
 using MovieRental.Models;
 using MovieRental.ViewModel;
-using MovieRental.ViewModels;
 
 namespace MovieRental.Controllers
 {
