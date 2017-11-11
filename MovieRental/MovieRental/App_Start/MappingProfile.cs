@@ -12,15 +12,19 @@ namespace MovieRental.App_Start
     {
         public MappingProfile()
         {
+            // Domain to DTO
             Mapper.CreateMap<Customer, CustomerDto>();
-                //.ForMember(c => c.Id, opt => opt.Ignore());
+            Mapper.CreateMap<Movie, MovieDto>();
+            Mapper.CreateMap<MembershipType, MembershipTypeDto>();
+
+
+            // DTO to Domain
             Mapper.CreateMap<CustomerDto, Customer>()
                 .ForMember(c => c.Id, opt => opt.Ignore());
-
-            Mapper.CreateMap<Movie, MovieDto>();
-              // .ForMember(m => m.Id, opt => opt.Ignore());
             Mapper.CreateMap<MovieDto, Movie>()
                 .ForMember(m => m.Id, opt => opt.Ignore());
+            Mapper.CreateMap<MembershipTypeDto, MembershipType>()
+                .ForMember(c => c.Id, opt => opt.Ignore());
         }
     }
 }

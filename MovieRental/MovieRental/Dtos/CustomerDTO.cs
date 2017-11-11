@@ -18,6 +18,8 @@ namespace MovieRental.Dtos
         
         public byte MembershipTypeId { get; set; }
 
+        public MembershipTypeDto MembershipType { get; set; }
+
         
         public DateTime? Birthday { get; set; }
     }
