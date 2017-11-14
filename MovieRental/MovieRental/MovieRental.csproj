@@ -293,6 +293,10 @@
     <Compile Include="Migrations\201711061956048_RangeForGenre.Designer.cs">
       <DependentUpon>201711061956048_RangeForGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711142119111_SeedUsers.cs" />
+    <Compile Include="Migrations\201711142119111_SeedUsers.Designer.cs">
+      <DependentUpon>201711142119111_SeedUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -622,6 +626,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711061956048_RangeForGenre.resx">
       <DependentUpon>201711061956048_RangeForGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711142119111_SeedUsers.resx">
+      <DependentUpon>201711142119111_SeedUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

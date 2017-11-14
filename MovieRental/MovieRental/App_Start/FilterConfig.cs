@@ -8,6 +8,8 @@ namespace MovieRental
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            //Global authorization
+            filters.Add(new AuthorizeAttribute());
         }
     }
 }
