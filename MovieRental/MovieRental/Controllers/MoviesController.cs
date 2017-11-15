@@ -26,7 +26,10 @@ namespace MovieRental.Controllers
         // GET: Movies/Random
         public ActionResult Index()
         {
-            return View();
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
+
+            return View("ReadOnlyList");
         }
 
         //EDIT id = id
@@ -41,6 +44,7 @@ namespace MovieRental.Controllers
         }
 
         //movies/new
+        [Authorize(Roles= RoleName.CanManageMovies)]
         public ActionResult NewMovie()
         {
             var genres = _context.Genres.ToList();
