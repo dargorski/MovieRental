@@ -10,6 +10,8 @@ namespace MovieRental
             filters.Add(new HandleErrorAttribute());
             //Global authorization
             filters.Add(new AuthorizeAttribute());
+            //Cannot access via http://
+            filters.Add(new RequireHttpsAttribute());
         }
     }
 }
