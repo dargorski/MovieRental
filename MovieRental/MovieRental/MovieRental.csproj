@@ -20,9 +20,9 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44335</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -300,6 +300,10 @@
     <Compile Include="Migrations\201711151010537_AddDrivingLicenseToApplicationUser.cs" />
     <Compile Include="Migrations\201711151010537_AddDrivingLicenseToApplicationUser.Designer.cs">
       <DependentUpon>201711151010537_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711152214031_AddPhoneToRegister.cs" />
+    <Compile Include="Migrations\201711152214031_AddPhoneToRegister.Designer.cs">
+      <DependentUpon>201711152214031_AddPhoneToRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -638,6 +642,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711151010537_AddDrivingLicenseToApplicationUser.resx">
       <DependentUpon>201711151010537_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711152214031_AddPhoneToRegister.resx">
+      <DependentUpon>201711152214031_AddPhoneToRegister.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
